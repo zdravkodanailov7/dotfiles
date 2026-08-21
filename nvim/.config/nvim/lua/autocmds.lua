@@ -1,5 +1,10 @@
 require "nvchad.autocmds"
 
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  desc = "Reload files changed outside Neovim",
+  command = "checktime",
+})
+
 vim.api.nvim_create_autocmd("User", {
   pattern = "NvThemeReload",
   callback = function()

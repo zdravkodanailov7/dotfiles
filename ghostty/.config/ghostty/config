@@ -1,7 +1,9 @@
 # Ghostty Configuration - Migrated from Alacritty
 # Font settings
 font-family = CaskaydiaMono Nerd Font
-font-size = 13
+font-size = 18
+cursor-style = block
+cursor-style-blink = false
 
 # Window settings
 window-padding-x = 14
@@ -10,14 +12,14 @@ window-decoration = true
 macos-titlebar-style = tabs
 window-save-state = never
 quit-after-last-window-closed = true
-background-opacity = 0.9
+background-opacity = 1
+background-opacity-cells = false
 background-blur-radius = 20
 
 # Environment
 term = xterm-256color
 
-# Theme
-theme = solarized-osaka-craftzdog
+theme = TokyoNight Moon
 
 # Key bindings
 keybind = f11=toggle_fullscreen

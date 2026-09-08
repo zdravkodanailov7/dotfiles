@@ -9,6 +9,8 @@ vim.keymap.set("n", "<leader>fz", builtin.current_buffer_fuzzy_find, { desc = "S
 vim.keymap.set("n", "<leader>fr", builtin.resume, { desc = "Resume last search" })
 vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Find document symbols" })
 vim.keymap.set("n", "<leader>fS", builtin.lsp_workspace_symbols, { desc = "Find workspace symbols" })
+vim.keymap.set("n", "<leader>cm", builtin.git_commits, { desc = "Git commits" })
+vim.keymap.set("n", "<leader>gt", builtin.git_status, { desc = "Git status" })
 
 vim.keymap.set("n", "<leader>fa", function()
   builtin.find_files({ follow = true, no_ignore = true, hidden = true })
@@ -37,7 +39,7 @@ vim.keymap.set("n", "<leader>/", "gcc", { desc = "Toggle comment", remap = true 
 vim.keymap.set("x", "<leader>/", "gc", { desc = "Toggle selected comments", remap = true })
 
 vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file tree" })
-vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "Focus file tree" })
+vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeFindFile!<CR>", { desc = "Reveal current file in tree" })
 
 vim.keymap.set("n", "<leader>fm", function()
   vim.lsp.buf.format()

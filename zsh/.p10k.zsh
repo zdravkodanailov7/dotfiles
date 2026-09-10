@@ -383,6 +383,13 @@
       local   modified='%178F'  # yellow foreground
       local  untracked='%39F'   # blue foreground
       local conflicted='%196F'  # red foreground
+      if [[ ${_dotfiles_appearance:-} == day ]]; then
+        meta='%F{#6172b0}'
+        clean='%F{#587539}'
+        modified='%F{#8c6c3e}'
+        untracked='%F{#2e7de9}'
+        conflicted='%F{#c64343}'
+      fi
     else
       # Styling for incomplete and stale Git status.
       local       meta='%244F'  # grey foreground

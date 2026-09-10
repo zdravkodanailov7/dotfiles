@@ -3,6 +3,7 @@ require("config.options")
 require("config.lazy")
 require("config.lsp")
 
+require("config.appearance").setup()
 vim.cmd.colorscheme("tokyonight")
 
 require("config.keymaps")

@@ -5,6 +5,7 @@ return {
     priority = 1000,
     opts = {
       style = "moon",
+      light_style = "day",
       transparent = false,
     }
   },
@@ -61,7 +62,9 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
       options = {
-        theme = "tokyonight",
+        theme = function()
+          return vim.o.background == "light" and "tokyonight-day" or "tokyonight-moon"
+        end,
         globalstatus = true,
       },
       tabline = {
@@ -126,4 +129,16 @@ return {
       shade_terminals = false,
     },
   },
+  {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    ---@type snacks.Config
+    opts = {
+      picker = { enabled = true }
+    },
+    keys = {
+      { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff (Hunks)" },
+    }
+  }
 }

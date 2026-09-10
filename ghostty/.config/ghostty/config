@@ -19,7 +19,8 @@ background-blur-radius = 20
 # Environment
 term = xterm-256color
 
-theme = TokyoNight Moon
+# Follow macOS Appearance (including its automatic schedule).
+theme = dark:TokyoNight Moon,light:TokyoNight Day
 
 # Key bindings
 keybind = f11=toggle_fullscreen

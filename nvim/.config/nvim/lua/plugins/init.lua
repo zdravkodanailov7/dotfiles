@@ -138,7 +138,14 @@ return {
       picker = { enabled = true }
     },
     keys = {
-      { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff (Hunks)" },
+      { 
+        "<leader>gd",
+        function()
+          Snacks.picker.git_diff({
+            layout = { fullscreen = true }
+          }) 
+        end,
+        desc = "Git Diff (Hunks)" },
     }
   }
 }

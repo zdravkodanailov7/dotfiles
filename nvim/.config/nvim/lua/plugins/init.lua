@@ -147,5 +147,39 @@ return {
         end,
         desc = "Git Diff (Hunks)" },
     }
+  },
+  {
+    "goolord/alpha-nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    lazy = false,
+    config = function()
+      local d = require("alpha.themes.dashboard")
+      d.section.header.val = {
+        [[                                                                       ]],
+        [[                                                                       ]],
+        [[                                                                       ]],
+        [[                                                                       ]],
+        [[                                                                     ]],
+        [[       ████ ██████           █████      ██                     ]],
+        [[      ███████████             █████                             ]],
+        [[      █████████ ███████████████████ ███   ███████████   ]],
+        [[     █████████  ███    █████████████ █████ ██████████████   ]],
+        [[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
+        [[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
+        [[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+        [[                                                                       ]],
+        [[                                                                       ]],
+        [[                                                                       ]],
+      }
+      d.section.buttons.val = {
+        d.button("f", "󰈞  Find file", "<cmd>lua Snacks.picker.files()<CR>"),
+        d.button("r", "󰊄  Recent files", "<cmd>lua Snacks.picker.recent()<CR>"),
+        d.button("g", "󰈬  Live grep", "<cmd>lua Snacks.picker.grep()<CR>"),
+        d.button("n", "󰡯  New file", "<cmd>ene<CR>"),
+        d.button("q", "󰅚  Quit", "<cmd>qa<CR>"),
+      }
+      d.section.footer.val = "macOS · Neovim"
+      require("alpha").setup(d.config)
+    end,
   }
 }

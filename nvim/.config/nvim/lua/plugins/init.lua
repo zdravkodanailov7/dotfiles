@@ -69,7 +69,16 @@ return {
       },
       tabline = {
         lualine_a = { "buffers" },
-      }
+      },
+      sections = {
+        lualine_b = {
+          { function() return vim.fn.fnamemodify(vim.fn.getcwd(), ":t") end, icon = "\u{f07b}" },
+          "branch", "diff", "diagnostics",
+        },
+        lualine_c = {
+          "filename"
+        }
+      },
     },
   },
   {

@@ -1,0 +1,5 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // Default model for new sessions.
+  "model": "opencode-go/deepseek-v4.1-flash",
+}
